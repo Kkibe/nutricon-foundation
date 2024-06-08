@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.470e894f.css",
+    "main.js": "/static/js/main.19ff417f.js",
+    "static/media/bg.mp4": "/static/media/bg.c69766a79367622c78ce.mp4",
+    "static/media/taxa2.png": "/static/media/taxa2.fcbd540dce3f0000e608.png",
+    "static/media/taxa-flyer.png": "/static/media/taxa-flyer.8a8fc6227951ed18d6b2.png",
+    "static/media/taxa1.png": "/static/media/taxa1.6a997dab3b4c72d95898.png",
+    "static/media/taxa.png": "/static/media/taxa.576b57291bb5ad3088b2.png",
+    "static/media/online-services-for-you.webp": "/static/media/online-services-for-you.e64ccb4d3b7acf56a4c2.webp",
+    "static/media/taxa-s3.png": "/static/media/taxa-s3.f3b41e17c70f0cea2358.png",
+    "static/media/taxa-s4.png": "/static/media/taxa-s4.90334bd516d0ab318ffd.png",
+    "static/media/taxa-s1.png": "/static/media/taxa-s1.3453c6387b9ff8e63839.png",
+    "static/media/logo.png": "/static/media/logo.a37c70dea5743bd5e641.png",
+    "static/media/taxa-s2.png": "/static/media/taxa-s2.1d97b6d5d0abfa5583fe.png",
+    "index.html": "/index.html",
+    "main.470e894f.css.map": "/static/css/main.470e894f.css.map",
+    "main.19ff417f.js.map": "/static/js/main.19ff417f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.470e894f.css",
+    "static/js/main.19ff417f.js"
+  ]
+}

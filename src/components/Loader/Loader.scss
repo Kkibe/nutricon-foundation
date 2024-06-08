@@ -1,0 +1,76 @@
+.loader {
+  position: relative;
+  top:50%;
+  left:50%;
+  animation: whole 18s linear infinite;
+  width:50px;
+  height:50px;
+}
+.bit {
+  position: absolute;
+  top:20px;
+  left:20px;
+  background:#C8321E;
+  border-radius:100px;
+  animation: dots 2.4s ease infinite;
+}
+.b1 {
+  animation-delay:-0s;
+}
+.b2 {
+  animation-delay:-0.2s;
+}
+.b3 {
+  animation-delay:-0.4s;
+}
+.b4 {
+  animation-delay:-0.6s;
+}
+.b5 {
+  animation-delay:-0.8s;
+}
+.b6 {
+  animation-delay:-1s;
+}
+.b7 {
+  animation-delay:-1.2s;
+}
+.b8 {
+  animation-delay:-1.4s;
+}
+.b9 {
+  animation-delay:-1.6s;
+}
+.b10 {
+  animation-delay:-1.8s;
+}
+.b11 {
+  animation-delay:-2.0s;
+}
+.b12 {
+  animation-delay:-2.2s;
+}
+@keyframes dots {
+  0%, 100% {
+    margin-top:15px;
+    margin-left:15px;
+    width:30px;
+    height:30px;
+    background: var(--light-blue);
+  }
+  50% {
+    margin-top:0px;
+    margin-left:0px;
+    width:60px;
+    height:60px;
+    background: var(--blue);
+  }
+}
+@keyframes whole {
+  0% {
+    transform:translate(-50%,-50%) rotate(0deg);
+  }
+  100% {
+    transform:translate(-50%,-50%) rotate(-360deg);
+  }
+}
