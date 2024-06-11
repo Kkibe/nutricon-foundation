@@ -43,7 +43,8 @@
         align-items: center;
         justify-content: space-evenly;
         
-        @media screen and (max-width: 478px) {
+        //@media screen and (max-width: 478px) {
+        @media screen and (max-width: 480px) {
             flex-wrap: wrap;
             gap: 10px;
         }

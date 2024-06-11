@@ -4,10 +4,11 @@ import { getNews } from '../firebase';
 import { Link, NavLink } from 'react-router-dom';
 import { Facebook, LinkedIn, NetworkWifi1Bar, X } from '@mui/icons-material';
 import { useLocation } from 'react-router-dom';
+import Loader from '../components/Loader/Loader';
 
 
 export default function News() {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [news, setNews] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [newsPerPage] = useState(6);
@@ -19,7 +20,7 @@ export default function News() {
   })
   
   useEffect(() =>{
-    getNews(currentPage * newsPerPage, category, setNews);
+    getNews(currentPage * newsPerPage, category, setNews, setLoading);
   }, [currentPage, category, isOnline, newsPerPage, location]);
   
   useEffect(() => {
@@ -29,7 +30,7 @@ export default function News() {
   }, [loading]);
   
   const handleReload = () => {
-    getNews(currentPage * newsPerPage, category, setNews);
+    getNews(currentPage * newsPerPage, category, setNews, setLoading);
   }
   
   useEffect(() => {
@@ -62,12 +63,16 @@ export default function News() {
             news.length > 0 && <NavLink className="btn" onClick={() => setCurrentPage(currentPage + 1)}>{loading ? "Loading..." : "Load More"}</NavLink>
           }
           {
-            news.length === 0 && <div className='no-network'>
+            !isOnline && news.length === 0 && <div className='no-network'>
               <h1>Nothing Yet!</h1>
               <p>This could be a network issue. Check you internet and try again.</p>
               <NetworkWifi1Bar className='wifi'/>
               <NavLink className="btn" onClick={handleReload}>Reload</NavLink>
             </div>
+          }
+                    
+          {
+            ((!news.length > 0) && loading) && <Loader />
           }
       </div>
     </div>

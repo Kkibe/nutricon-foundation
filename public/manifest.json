@@ -50,7 +50,12 @@
       "purpose": "maskable"
     }
   ],
-  "author": "https://github.com/k-kibet",
+  "author": "Kibet Korir",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kkibe/taxa-kenya"
+  },
+  "license": "ISC/MIT",
   "keywords": [
     "tax", "project", "kenya", "taxes", "policy", "tax law", "economics", "returns", "kra", "fiscal policy", 
     "tax data", "tax research", "business", "kenya tax", "business today", "tax news", "tax insights",

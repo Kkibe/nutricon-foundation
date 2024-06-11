@@ -5,6 +5,7 @@ import { AuthContext } from '../AuthContext';
 import { NavLink } from 'react-router-dom';
 import { signOut } from 'firebase/auth';
 import { Helmet } from 'react-helmet-async';
+import Loader from '../components/Loader/Loader';
 
 export default function Admin() {
   const [error, setError] = useState(null);
@@ -13,13 +14,14 @@ export default function Admin() {
   const [image, setImage] = useState(null);
   const [category, setCategory] = useState('all');
   const {currentUser} = useContext(AuthContext);
+  const [loading, setLoading] = useState(true);
   
   const handleSubmit = (e) => {
       e.preventDefault();
       if(!title && !description && !image){
           return setError("Enter all fields to continue");
       }
-      addNews({title, description, category: category, image}, setError);
+      addNews({title, description, category: category, image}, setError, setLoading);
   }
 
   useEffect(() => {
@@ -32,6 +34,10 @@ export default function Admin() {
       !currentUser && window.history.back();
     }, [currentUser]);
 
+    useEffect(() => {
+      setLoading(false);
+    }, []);
+    
     const handleLogOut = () => {
       signOut(auth);
     };
@@ -45,7 +51,7 @@ export default function Admin() {
             <meta name="description" content={"Taxa Kenya is dedicated to combating tax discrimination and injustices in Kenya. Through education, advocacy, and community engagement, we are committed to advocating for fair and equitable tax policies that benefit all citizens."}/>
         </Helmet>
         <h1>Post a blog <NavLink className='btn' onClick={handleLogOut}>Log Out</NavLink></h1>
-        <form onSubmit={handleSubmit}>
+        {!loading && <form onSubmit={handleSubmit}>
             <label htmlFor="title">post title:</label>
             <textarea type="text"  placeholder="Write your post title here..." name='title'  required value={title} onChange={(e) => setTitle(e.target.value)}/>
             <label htmlFor="image">post image:</label>
@@ -75,7 +81,10 @@ export default function Admin() {
             {
               error && <h4 className='error'>{error}</h4>
             }
-        </form>
+        </form>}
+        {
+          loading && <Loader />
+        }
     </div>
   )
 }

@@ -2,9 +2,9 @@ import React from 'react';
 import './Featured.scss';
 import { NavLink } from 'react-router-dom';
 
-import Taxa1 from '../../assets/taxa-s1.png';
-import Taxa2 from '../../assets/taxa-s2.png';
-import Taxa3 from '../../assets/taxa-s3.png';
+import Taxa1 from '../../assets/taxa-finance.png';
+import Taxa2 from '../../assets/taxa-business.png';
+import Taxa3 from '../../assets/taxa-statistics.png';
 import Taxa4 from '../../assets/taxa-s4.png';
 
 

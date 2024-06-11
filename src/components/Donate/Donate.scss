@@ -29,10 +29,11 @@
         width: 20px;
         height: 20px;
         margin: 5px 5px;
-        background: var(--light-blue);
+        background: var(--transparent);
         cursor: pointer;
         &:hover{
-            background: var(--blue);
+            background: var(--light-blue);
+            border: .5px solid var(--blue);
         }
     }
     

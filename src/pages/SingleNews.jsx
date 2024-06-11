@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Image from '../assets/taxa1.png';
+import Image from '../assets/taxa.png';
 import { addNewsViews, getNews, getNewsItem } from '../firebase';
 import NewsItem from '../components/NewsItem/NewsItem';
 import Loader from '../components/Loader/Loader';
@@ -11,6 +11,7 @@ export default function SingleNews() {
   const [news, setNews] = useState(null);
   const [scroll, setScroll] = useState(0);
   const [relatedNews, setRelatedNews] = useState([]);
+  const [loading, setLoading] = useState(null);
   let location = useLocation();
   
   const readingTime = (articleText) => {
@@ -30,7 +31,7 @@ export default function SingleNews() {
  };
   
   useEffect(() => {
-    getNewsItem(window.location.pathname.split('/news/')[1], setNews);
+    getNewsItem(window.location.pathname.split('/news/')[1], setNews, setLoading);
     addNewsViews(window.location.pathname.split('/news/')[1]);
     window.onscroll = () => {
       var windowTop = document.documentElement.scrollTop;
@@ -41,7 +42,7 @@ export default function SingleNews() {
   }, [location]);
 
   useEffect(() => {
-    news && getNews(2,  news.category, setRelatedNews);
+    news && getNews(3,  news.category, setRelatedNews, setLoading);
   }, [news])
   
   return (
@@ -74,7 +75,9 @@ export default function SingleNews() {
             <h3>Related News:</h3>
             <div className="news-items">
             {
-              relatedNews.length > 0 && relatedNews.map((blog) => {
+              relatedNews.length > 0 && relatedNews.filter((blog) =>{
+                return blog.id !== news.id;
+              }).map((blog) => {
                 return <NewsItem key={blog.id} data={blog}/>
               })
             }
@@ -82,7 +85,7 @@ export default function SingleNews() {
           </div>}
 
           {
-            !news && <Loader />
+            (!news && loading) && <Loader />
           }
     </div>
   )

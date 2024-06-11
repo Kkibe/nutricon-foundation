@@ -19,7 +19,7 @@ const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);
 const storage = getStorage(app);
 export const auth = getAuth(app);
-await enableIndexedDbPersistence(db);
+//await enableIndexedDbPersistence(db);
 const analytics = getAnalytics(app);
 
 export const signInUser = (email, password, setError) => {
@@ -33,7 +33,8 @@ export const signInUser = (email, password, setError) => {
   return;
 }
 
-export const getNews= async (pagination, category, setNews) => {
+export const getNews= async (pagination, category, setNews, setLoading) => {
+  setLoading(true);
   const newsCollectionRef = collection(db, "news");
   var q = query(newsCollectionRef, orderBy("timestamp", "desc"), limit(pagination));
   if(category !== 'all'){
@@ -47,15 +48,19 @@ export const getNews= async (pagination, category, setNews) => {
     });
   }).then(() => {
     setNews(news);
-  });
+    setLoading(false);
+  }).catch(err => setLoading(false));
 };
 
-export const getNewsItem = async (newsId, setNewsItem) => {
+export const getNewsItem = async (newsId, setNewsItem, setLoading) => {
+  setNewsItem(null);
+  setLoading(true);
   const newsDocRef = doc(db, "news", newsId);
  const newsDoc = await getDoc(newsDocRef);
   if (newsDoc.exists()) {
     setNewsItem({id: newsDoc.id, ...newsDoc.data()})
   }
+  setLoading(false);
   return;
 };
 
@@ -99,7 +104,8 @@ export const addMailList = async (data, setSuccess, setError) => {
   return;
 };
 
-export  const addNews = async (data, setError) => {
+export  const addNews = async (data, setError, setLoading) => {
+  setLoading(true);
   const newsDocRef = collection(db, "news");
   if (data.image) {
     const imageRef = ref(storage, `images/${data.image.name.split(" ").join("_")}`);
@@ -119,7 +125,12 @@ export  const addNews = async (data, setError) => {
         window.location.replace(`/news/${docRef.id}`);
       }).catch(async (error) => {
         setError(error.message);
+        setLoading(false);
       });
     })
-  } else alert('Please upload an image');
+  } else {
+    alert('Please} upload an image');
+    setLoading(false);
+  };
+  
 };
