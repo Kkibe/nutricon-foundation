@@ -8,6 +8,7 @@
   --dark-blue: #1253A0;//#007A37;//#0067b8
   --blue: #2196F3;//#00B140;
   --grey: #7288a2;//#8198ae//7a7979//#4d5974
+  --light-grey: #ccc;
   --dark-shadow: 0px 5px 3px -4px var(--dark);
   --shadow: 0px 1px 2px -1px var(--dark),0px 1px 2px -1px var(--blue);
   --transparent:rgba(0, 0, 0, .03);
@@ -34,7 +35,6 @@
     justify-content: center;
     margin-top: 60px;
     color: var(--dark);
-    //min-height: calc(100vh - 200px);
     
     h1{
       width: 100%;
@@ -139,9 +139,5 @@
   .btn:hover {
     background: var(--lite);
     color: var(--grey);
-  
-
-    //background: var(--lite);
-    //color: var(--black);
   }
 }

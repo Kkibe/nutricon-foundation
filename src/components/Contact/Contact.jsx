@@ -62,9 +62,6 @@ const Contact = () => {
               </div>
               <textarea placeholder="MESSAGE" required value={message} onChange={(e) => setMessage(e.target.value)}/>
               <button className='btn' title='send' type='submit'>SEND</button>
-              {
-                error && <h4 className='error'>Invalid Phone Number</h4>
-              }
           </form> 
           </div>
 

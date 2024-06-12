@@ -11,7 +11,7 @@ export default function News() {
   const [loading, setLoading] = useState(true);
   const [news, setNews] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [newsPerPage] = useState(6);
+  const [newsPerPage] = useState(8);
   const [category, setCategory] = useState('all');
   let location = useLocation();
 
@@ -63,7 +63,7 @@ export default function News() {
             news.length > 0 && <NavLink className="btn" onClick={() => setCurrentPage(currentPage + 1)}>{loading ? "Loading..." : "Load More"}</NavLink>
           }
           {
-            !isOnline && news.length === 0 && <div className='no-network'>
+            (!isOnline && (news.length === 0) && !loading) && <div className='no-network'>
               <h1>Nothing Yet!</h1>
               <p>This could be a network issue. Check you internet and try again.</p>
               <NetworkWifi1Bar className='wifi'/>
