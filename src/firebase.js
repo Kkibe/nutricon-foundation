@@ -6,13 +6,13 @@ import { getDownloadURL, getStorage, ref, uploadBytes } from "firebase/storage";
 import { getAnalytics } from "firebase/analytics";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyDw1QZnLlEWLOwk54uOTf5V6393KqAv6UY",
-    authDomain: "taxa-ca7ec.firebaseapp.com",
-    projectId: "taxa-ca7ec",
-    storageBucket: "taxa-ca7ec.appspot.com",
-    messagingSenderId: "66856931301",
-    appId: "1:66856931301:web:ee653d801cf12d2c9ca90c",
-    measurementId: "G-SCQ3L2C189"
+  apiKey: "AIzaSyAJ-zY4c9Vr4bEIAZ92kyyDL8y91jTogVo",
+  authDomain: "smartdiet-1.firebaseapp.com",
+  projectId: "smartdiet-1",
+  storageBucket: "smartdiet-1.appspot.com",
+  messagingSenderId: "144433695269",
+  appId: "1:144433695269:web:ca13f9121040608f9e4dcc",
+  measurementId: "G-S17K15G8D9"
 };
 
 const app = initializeApp(firebaseConfig);

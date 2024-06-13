@@ -1,7 +1,6 @@
 import { Routes, Route} from "react-router-dom";
 import { HelmetProvider, HelmetData  } from "react-helmet-async";
 import { useEffect, useState, useContext} from 'react';
-import { renderToString } from 'react-dom/server';
 import { AuthContext } from './AuthContext'
 
 import Navbar from './components/Navbar/Navbar';
@@ -33,7 +32,7 @@ function App() {
       }
     }
   }, [loading]);
-
+  
   return (
     <HelmetProvider>
     <div className="App">

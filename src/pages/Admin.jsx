@@ -12,7 +12,7 @@ export default function Admin() {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [image, setImage] = useState(null);
-  const [category, setCategory] = useState('all');
+  const [category, setCategory] = useState('nutrition');
   const {currentUser} = useContext(AuthContext);
   const [loading, setLoading] = useState(true);
   
@@ -70,10 +70,10 @@ export default function Admin() {
             <label htmlFor='category'>Select category:</label>
             <select defaultValue={'all'} placeholder="Select option" id='category' name='category'
               onChange={(e) =>setCategory(e.target.value)}>
-              <option value="all" >All</option>
-              <option value="business" >Business</option>
-              <option value="finance" >Finance</option>
-              <option value="statistics" >Statistics</option>
+              <option value="health" >Health</option>
+              <option value="diabetes" >Diabetes</option>
+              <option value="nutrition" >Nutrition</option>
+              <option value="fitness" >Fitness</option>
             </select>
             <label htmlFor="description">post description:</label>
             <textarea placeholder="Write post content here..." name='description' id='description' required value={description} onChange={(e) => setDescription(e.target.value)}/>

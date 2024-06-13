@@ -42,10 +42,10 @@ export default function News() {
       <div className="news-flyer">
         <h1>Explore News</h1>
         <div className="order-categories">
-          <NavLink title='all' to='?category=all' className={category === 'all' && "current"}>All</NavLink>
-          <NavLink title='finance' to='?category=finance' className={category === 'finance' && "current"}>Finance</NavLink>
-          <NavLink title='business' to='?category=business' className={category === 'business' && "current"}>Business</NavLink>
-          <NavLink title='statistics' to='?category=statistics' className={category === 'statistics' && "current"}>Statistics</NavLink>
+          <NavLink title='health' to='?category=health' className={category === 'health' && "current"}>Health</NavLink>
+          <NavLink title='diabetes' to='?category=diabetes' className={category === 'diabetes' && "current"}>Diabetes</NavLink>
+          <NavLink title='nutrition' to='?category=nutrition' className={category === 'nutrition' && "current"}>Nutrition</NavLink>
+          <NavLink title='fitness' to='?category=fitness' className={category === 'fitness' && "current"}>Fitness</NavLink>
         </div>
         <div className="social">
           <Link to='https://twitter.com/ancientpupy' title='twitter/@taxa_kenya' target='_blank'><X /></Link>
