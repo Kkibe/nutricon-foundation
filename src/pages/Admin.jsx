@@ -4,8 +4,8 @@ import { addNews, auth } from '../firebase';
 import { AuthContext } from '../AuthContext';
 import { NavLink } from 'react-router-dom';
 import { signOut } from 'firebase/auth';
-import { Helmet } from 'react-helmet-async';
 import Loader from '../components/Loader/Loader';
+import AppHelmet from '../components/AppHelmet';
 
 export default function Admin() {
   const [error, setError] = useState(null);
@@ -43,13 +43,7 @@ export default function Admin() {
     };
   return (
     <div className='admin'>
-        <Helmet>
-            <meta charSet="utf-8" />
-            <title>Admin Taxa Kenya - Fair Taxes, Just Kenya: Unite for Equity and Accountability.</title>
-            <link rel="canonical" href={window.location.hostname} />
-            <base href={window.location.hostname}></base>
-            <meta name="description" content={"Taxa Kenya is dedicated to combating tax discrimination and injustices in Kenya. Through education, advocacy, and community engagement, we are committed to advocating for fair and equitable tax policies that benefit all citizens."}/>
-        </Helmet>
+        <AppHelmet title={'Admin | Nutricon Foundation'} />
         <h1>Post a blog <NavLink className='btn' onClick={handleLogOut}>Log Out</NavLink></h1>
         {!loading && <form onSubmit={handleSubmit}>
             <label htmlFor="title">post title:</label>

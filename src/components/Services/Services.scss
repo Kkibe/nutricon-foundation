@@ -10,12 +10,17 @@
 
 .service{
 width: calc((100% / 4) - 50px);
-min-width: 300px;
-padding: 5px 10px;
+min-width: 280px;
+padding: 5px 5px;
 border-radius: 4px;
 color: var(--dark);
 cursor: pointer;
 margin: 10px 0;
+@media screen and (max-width: 488px){
+  &{
+      min-width: 100%;
+  }
+}
 
 img {
   width: 150px;
@@ -46,7 +51,6 @@ a {
     width: 100%;
 }
 
-//@media screen and (max-width: 693px){
 @media screen and (max-width: 789px) {
     &{
         width: calc(100% / 2);

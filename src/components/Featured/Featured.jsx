@@ -2,10 +2,10 @@ import React from 'react';
 import './Featured.scss';
 import { NavLink } from 'react-router-dom';
 
-import Taxa1 from '../../assets/taxa-finance.png';
-import Taxa2 from '../../assets/taxa-business.png';
-import Taxa3 from '../../assets/taxa-statistics.png';
-import Taxa4 from '../../assets/taxa-s4.png';
+import Taxa1 from '../../assets/1/1.png';
+import Taxa2 from '../../assets/2/1.png';
+import Taxa3 from '../../assets/1/2.png';
+import Taxa4 from '../../assets/2/2.png';
 
 
 const Featured = () => {

@@ -1,4 +1,4 @@
-const CACHE_NAME = 'taxa-cache';
+const CACHE_NAME ='nutricon-foundation-cache';
 const urlsToCache = [
     '/',
     '/index.html',
@@ -7,21 +7,21 @@ const urlsToCache = [
     '*'
 ];
 
-self.addEventListener('install', event => {
+window.self.addEventListener('install', event => {
     event.waitUntil(
         caches.open(CACHE_NAME)
             .then(cache => {
                 return cache.addAll(urlsToCache)
-                .then(() => self.skipWaiting());
+                .then(() => window.self.skipWaiting());
             })
     );
 });
 
-self.addEventListener('activate', event => {
-    event.waitUntil(self.clients.claim());
+window.self.addEventListener('activate', event => {
+    event.waitUntil(window.self.clients.claim());
 })
 
-self.addEventListener('fetch', (event) => {
+window.self.addEventListener('fetch', (event) => {
     if(navigator.onLine){
         var fetchRequest = event.request.clone();
         return fetch(fetchRequest).then(

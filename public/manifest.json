@@ -1,7 +1,7 @@
 {
-  "short_name": "TAXA KENYA",
-  "name": "TAXA KENYA",
-  "description": "Fair Taxes, Just Kenya: Unite for Equity and Accountability",
+  "short_name": "NUTRICON FOUNDATION",
+  "name": "NUTRICON FOUNDATION",
+  "description": "A source for expert advice on nutrition, fitness, and diabetes management. Explore tips for healthy living, balanced diets, and effective workout routines to support your overall health and wellness journey",
   "icons": [
     {
       "src": "favicon.ico",
@@ -56,18 +56,12 @@
     "url": "https://github.com/kkibe/taxa-kenya"
   },
   "license": "ISC/MIT",
-  "keywords": [
-    "tax", "project", "kenya", "taxes", "policy", "tax law", "economics", "returns", "kra", "fiscal policy", 
-    "tax data", "tax research", "business", "kenya tax", "business today", "tax news", "tax insights",
-    "Debt Relief", "Debt Abolition", "Financial Freedom", "Economic Justice",
-    "Debt Counseling", "Financial Literacy", "Debt Management", "Debt Advocacy", "Community Outreach",
-    "Sustainable Debt Solutions", "Economic Empowerment", "Debt Forgiveness", "Financial Education"
-  ],
+  "keywords": ["nutrition guide", "health advice", "wellness tips", "disease", "food", "fitness tips", "lifestyle", "diet", "wellbeing", "Diabetes management"],
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
   "theme_color": "#2196f3",
   "background_color": "#ebf4fc",
  "orientation": "portrait",
-  "categories": ["Utilities", "Finance", "Business", "Productivity", "Social", "News", "Tools"]
+  "categories": ["Utilities", "Health", "Nutrition", "Productivity", "Social", "Epidemics", "Tools"]
 }

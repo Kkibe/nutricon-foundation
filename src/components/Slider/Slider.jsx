@@ -1,30 +1,26 @@
 import { ArrowLeftOutlined, ArrowRightOutlined  } from '@mui/icons-material';
-import {useEffect, useState} from 'react';
+import {useState} from 'react';
 import './Slider.scss'
 //slides
-import Taxa1 from '../../assets/online-services-for-you.webp';
-import Taxa2 from '../../assets/taxa2.png';
-import Taxa3 from '../../assets/taxa-flyer.png';
-import { NavLink } from 'react-router-dom';
+import Image1 from '../../assets/Nutrition_Story.png';
+import Image2 from '../../assets/DIETARY_GUIDELINES_FLYER.png';
+import Image3 from '../../assets/4.png';
 
 const slides = [
     {
         id: 1,
-        img: Taxa1,
-        title: "Exclusive research on tax issues in Kenya",
-        link: "#featured"
+        img: Image1,
+        title: "personalized meal plans tailored to your dietary preferences & nutritional goals",
     },
     {
         id: 2,
-        img: Taxa2,
-        title: "Resources to help you file returns easily",
-        link: "/about"
+        img: Image2,
+        title: "We create downloadable guides on topics related to nutrition & fitness",
     },
     {
         id: 3,
-        img: Taxa3,
-        title: "Informational materials and tax insights",
-        link: "/news",
+        img: Image3,
+        title: "We Provide one-on-one consultations for individuals seeking health guidance",
     }
     
 ]
@@ -56,7 +52,6 @@ export default function Slider() {
                             </div>
                             <div className="info">
                                 <h1>{slide.title}</h1>
-                               <NavLink to={slide.link} className='btn' title={slide.title.split(" ")[0] + "..."}>LEARN MORE</NavLink>
                             </div>
                         </div>
                     )

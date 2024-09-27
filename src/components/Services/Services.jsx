@@ -1,8 +1,8 @@
 import React from 'react';
-import Taxa1 from '../../assets/taxa-s1.png';
-import Taxa2 from '../../assets/taxa-flyer.png'
-import Taxa3 from '../../assets/taxa-s3.png';
-import Taxa4 from '../../assets/taxa-s4.png';
+import Taxa1 from '../../assets/wdd.png';
+import Taxa2 from '../../assets/eat_well_feel_well.png'
+import Taxa3 from '../../assets/1/5.png';
+import Taxa4 from '../../assets/2/8.png';
 
 import './Services.scss'
 import { NavLink } from 'react-router-dom';
@@ -11,34 +11,34 @@ const Data = [
   {
     id:1,
     name: "Learn more",
-    title: "Community Engagement and Mobilization",
-    img: Taxa1,
-    desc: "Build networks of community advocates to amplify voices and drive grassroots movements for change.",
+    title: "Expert Nutrition Advice",
+    img: Taxa2,
+    desc: "Our blog provides evidence-based nutrition tips tailored to various dietary needs. Whether you're managing diabetes, looking to lose weight, or simply aiming for a healthier lifestyle, our expert guidance will help you make informed food choices.",
     link: "#"
 },
 
 {
     id:2,
     name: "Learn more",
-    title: "Transparency and Accountability Initiative",
-    img: Taxa2,
-    desc: "Monitor and report on government tax collection and expenditure to ensure transparency and hold authorities accountable for tax-related decisions.",
+    title: "Comprehensive Fitness Routines",
+    img: Taxa1,
+    desc: "Explore a variety of fitness routines designed for all fitness levels, from beginners to advanced. We offer detailed workout plans, exercise tutorials, and tips to keep you motivated and engaged in your fitness journey.",
     link: "#"
 },
 {
   id:3,
   name: "Learn more",
-  title: "Education and Awareness Programs",
+  title: "Holistic Health Resources",
   img: Taxa4,
-  desc: "Conduct workshops, seminars, and webinars to educate the public about tax rights and responsibilities. Develop and distribute informational materials that explain tax issues and their impact on society.",
+  desc: "Our commitment to your well-being extends beyond nutrition and fitness. We provide resources on mental health, stress management, and holistic wellness practices to support a balanced and healthy lifestyle. Join our community and empower yourself with the tools you need for a healthier life.",
   link: "#"
 },
 {
     id:4,
     name: "Learn More",
-    title: "Advocacy and Policy Reform",
+    title: "Diabetes Management Strategies",
     img: Taxa3,
-    desc: "Engage with policymakers to advocate for fair and equitable tax policies. Draft policy recommendations and collaborate with government agencies to implement reforms.",
+    desc: "We specialize in offering practical strategies for effective diabetes management. Learn about dietary adjustments, exercise recommendations, and lifestyle changes that can help you maintain stable blood sugar levels and improve your overall health.",
     link: "#"
 }
         

@@ -5,6 +5,7 @@ import { Link, NavLink } from 'react-router-dom';
 import { Facebook, LinkedIn, NetworkWifi1Bar, X } from '@mui/icons-material';
 import { useLocation } from 'react-router-dom';
 import Loader from '../components/Loader/Loader';
+import AppHelmet from '../components/AppHelmet';
 
 
 export default function News() {
@@ -39,8 +40,9 @@ export default function News() {
  
   return (
     <div className='news'>
+      <AppHelmet title={'Articles | NUTRICON FOUNDATION'} />
       <div className="news-flyer">
-        <h1>Explore News</h1>
+        <h1>Explore Articles</h1>
         <div className="order-categories">
           <NavLink title='health' to='?category=health' className={category === 'health' && "current"}>Health</NavLink>
           <NavLink title='diabetes' to='?category=diabetes' className={category === 'diabetes' && "current"}>Diabetes</NavLink>

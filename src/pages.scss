@@ -2,6 +2,16 @@
 	width: 100%;
 	min-height: 100vh;
 	padding: 5px 10px;
+    .faqs-container {
+        width: 100%;
+        margin: 0 auto;
+        max-width: 1200px;
+        @media screen and (max-width: 576px){
+            &{
+                max-width: 100%;
+            }
+        }
+    }
 	.quote {
 		width: 100%;
 		margin: 1rem .3rem;

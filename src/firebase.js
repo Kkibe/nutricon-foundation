@@ -1,9 +1,8 @@
 import { initializeApp } from "firebase/app";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { increment } from "firebase/database";
-import {addDoc, collection, doc, enableIndexedDbPersistence, getDoc, getDocs, getFirestore, limit, query, updateDoc, where, orderBy, setDoc } from "firebase/firestore";
+import {addDoc, collection, doc, getDoc, getDocs, getFirestore, limit, query, updateDoc, where, orderBy, setDoc } from "firebase/firestore";
 import { getDownloadURL, getStorage, ref, uploadBytes } from "firebase/storage";
-import { getAnalytics } from "firebase/analytics";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAJ-zY4c9Vr4bEIAZ92kyyDL8y91jTogVo",
@@ -19,8 +18,6 @@ const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);
 const storage = getStorage(app);
 export const auth = getAuth(app);
-//await enableIndexedDbPersistence(db);
-const analytics = getAnalytics(app);
 
 export const signInUser = (email, password, setError) => {
   signInWithEmailAndPassword(auth, email, password).then((userCredential) => {

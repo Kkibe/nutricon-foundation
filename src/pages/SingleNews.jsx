@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Image from '../assets/taxa.png';
+import Image from '../assets/logo.png';
 import { addNewsViews, getNews, getNewsItem } from '../firebase';
 import NewsItem from '../components/NewsItem/NewsItem';
 import Loader from '../components/Loader/Loader';

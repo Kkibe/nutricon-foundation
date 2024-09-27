@@ -1,16 +1,10 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import AppHelmet from '../components/AppHelmet';
 
 export default function Error() {
   return (
     <div className='not-found'>
-          <Helmet>
-            <meta charSet="utf-8" />
-            <title>PAGE NOT FOUND TAXA KENYA</title>
-            <link rel="canonical" href={window.location.hostname} />
-            <base href={window.location.hostname}></base>
-            <meta name="description" content={"This page was not found!"}/>
-          </Helmet>
+      <AppHelmet title={'PAGE NOT FOUND NUTRICON FOUNDATION'} />
       <h1>404 ERROR!</h1>
       <h2>Page not found</h2>
       <div className="btn"  onClick={() =>{

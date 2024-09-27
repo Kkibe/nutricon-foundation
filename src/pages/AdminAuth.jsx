@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { signInUser } from '../firebase';
-import { Helmet } from 'react-helmet-async';
+import AppHelmet from '../components/AppHelmet';
 
 export default function AdminAuth() {
     const [email, setEmail] = useState('');
@@ -21,13 +21,7 @@ export default function AdminAuth() {
   
   return (
     <div className='admin'>
-        <Helmet>
-            <meta charSet="utf-8" />
-            <title>Admin Auth Taxa Kenya - Fair Taxes, Just Kenya: Unite for Equity and Accountability.</title>
-            <link rel="canonical" href={window.location.hostname} />
-            <base href={window.location.hostname}></base>
-            <meta name="description" content={"Taxa Kenya is dedicated to combating tax discrimination and injustices in Kenya. Through education, advocacy, and community engagement, we are committed to advocating for fair and equitable tax policies that benefit all citizens."}/>
-        </Helmet>
+        <AppHelmet title={'Admin Auth | Nutricon Foundation'} />
         <h1>ADMIN LOGIN</h1>
         <h4>Only for admin users</h4>
         <form onSubmit={handleSubmit}>
